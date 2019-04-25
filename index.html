@@ -8,5 +8,15 @@
 </head>
 <body>
     Hello world
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-messaging.js"></script>
+    <script>
+        var firebaseConfig = {
+            messagingSenderId: "sender-id",
+        };
+        firebase.initializeApp(firebaseConfig);
+        const messaging = firebase.messaging();
+        console.log("hello ", messaging);
+    </script>
 </body>
 </html>
