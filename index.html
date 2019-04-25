@@ -12,11 +12,18 @@
     <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-messaging.js"></script>
     <script>
         var firebaseConfig = {
-            messagingSenderId: "sender-id",
+            apiKey: "AIzaSyDiwMubHsvyd2L2NTOCnEzWM4NoGkHYeIo",
+            authDomain: "fir-push-notificator-app.firebaseapp.com",
+            databaseURL: "https://fir-push-notificator-app.firebaseio.com",
+            projectId: "fir-push-notificator-app",
+            storageBucket: "fir-push-notificator-app.appspot.com",
+            messagingSenderId: "350318375239"
         };
         firebase.initializeApp(firebaseConfig);
         const messaging = firebase.messaging();
-        console.log("hello ", messaging);
+        messaging.onMessage(function(payload) {
+            console.log('Message received. ', payload);
+        });
     </script>
 </body>
 </html>
